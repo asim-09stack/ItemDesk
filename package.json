@@ -1,0 +1,27 @@
+{
+  "name": "item-manager-portal",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A React portal to list, view, create, edit and delete items.",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^7.0.2",
+    "vite": "^5.4.8"
+  }
+}
