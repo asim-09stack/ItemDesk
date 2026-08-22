@@ -54,14 +54,39 @@ export default function ItemsListPage() {
       </div>
 
       <div className="toolbar">
-        <input
-          type="search"
-          className="input"
-          placeholder="Search by name or description…"
-          value={search}
-          onChange={(event) => setSearch(event.target.value)}
-          aria-label="Search items"
-        />
+        <div className="search">
+          <svg
+            className="search__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            className="input search__input"
+            placeholder="Search by name or description…"
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+            aria-label="Search items"
+          />
+          {search && (
+            <button
+              type="button"
+              className="search__clear"
+              onClick={() => setSearch('')}
+              aria-label="Clear search"
+            >
+              ×
+            </button>
+          )}
+        </div>
         <select
           className="input"
           value={category}
